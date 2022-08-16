@@ -1,0 +1,27 @@
+:root {
+  --green: #4C5844;
+  --dark-green: #3E4637;
+  --green-border-light: #879281;
+  --green-border-dark: #27301F;
+  --yellow: #BFBC89;
+  --white: #FFFFFF;
+}
+
+body {
+  background-color: #222222;
+  color: var(--white);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  background: var(--green);
+  height: 406px;
+  width: 512px;
+  box-shadow: inset -1px -1px 0 0px var(--green-border-dark), inset 1px 1px 0 0px var(--green-border-light);
+}
+
+/*# sourceMappingURL=style.css.map */
