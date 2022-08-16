@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/liam-mills/GoldSrc.css#readme",
   "dependencies": {
-    "dart-sass": "^1.25.0"
+    "sass": "^1.54.4"
   }
 }
