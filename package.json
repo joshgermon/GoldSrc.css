@@ -17,7 +17,7 @@
     "url": "https://github.com/liam-mills/GoldSrc.css/issues"
   },
   "homepage": "https://github.com/liam-mills/GoldSrc.css#readme",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.54.4"
   }
 }
