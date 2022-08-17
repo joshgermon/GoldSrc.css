@@ -24,11 +24,12 @@ input[type=submit], button, .button {
   font-family: "Verdana";
   font-size: 13px;
   cursor: pointer;
+  margin-right: 6px;
 }
-input[type=submit] + input[type=submit], input[type=submit] + button, input[type=submit] + .button, button + input[type=submit], button + button, button + .button, .button + input[type=submit], .button + button, .button + .button {
-  margin-left: 6px;
+input[type=submit] + input[type=submit]:last-child, input[type=submit] + button:last-child, input[type=submit] + .button:last-child, button + input[type=submit]:last-child, button + button:last-child, button + .button:last-child, .button + input[type=submit]:last-child, .button + button:last-child, .button + .button:last-child {
+  margin-right: 0;
 }
-input[type=submit]:active, input[type=submit]:focus, button:active, button:focus, .button:active, .button:focus {
+input[type=submit]:active:not(:disabled), input[type=submit]:focus:not(:disabled), button:active:not(:disabled), button:focus:not(:disabled), .button:active:not(:disabled), .button:focus:not(:disabled) {
   outline: 1px dotted var(--black);
   outline-offset: -4px;
 }
@@ -37,6 +38,12 @@ input[type=submit]:focus, button:focus, .button:focus {
 }
 input[type=submit]:active, button:active, .button:active {
   box-shadow: inset -1px -1px 0 0px var(--green-border-light), inset 1px 1px 0 0px var(--green-border-dark);
+}
+input[type=submit]:disabled, button:disabled, .button:disabled {
+  box-shadow: inset 0 0 0 1px var(--black), inset -2px -2px 0 0px var(--green-border-dark), inset 2px 2px 0 0px var(--green-border-light);
+  color: var(--green-border-dark);
+  text-shadow: 1px 1px rgba(135, 146, 129, 0.2);
+  cursor: not-allowed;
 }
 
 .button {
