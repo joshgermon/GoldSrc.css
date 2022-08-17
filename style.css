@@ -8,6 +8,24 @@
   --black: #000000;
 }
 
+html {
+  height: 100vh;
+  background-color: #222222;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+
 input[type=submit], button, .button {
   border: none;
   height: 24px;
@@ -17,11 +35,9 @@ input[type=submit], button, .button {
   padding-left: 5px;
   padding-right: 24px;
   text-decoration: none;
-  vertical-align: bottom;
   display: inline-block;
   padding-top: 0;
   padding-bottom: 2px;
-  font-family: "Verdana";
   font-size: 13px;
   cursor: pointer;
   margin-right: 6px;
@@ -50,25 +66,32 @@ input[type=submit]:disabled, button:disabled, .button:disabled {
   padding-top: 3px;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Verdana", sans-serif;
 }
 
 body {
-  background-color: #222222;
   color: var(--white);
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+}
+
+a:not(.button) {
+  color: var(--green-border-light);
+  text-decoration: none;
+}
+a:not(.button):focus-visible, a:not(.button):hover {
+  color: var(--green-border-dark);
 }
 
 .window {
+  padding: 8px;
   background: var(--green);
-  height: 406px;
-  width: 512px;
   box-shadow: inset -1px -1px 0 0px var(--green-border-dark), inset 1px 1px 0 0px var(--green-border-light);
 }
 

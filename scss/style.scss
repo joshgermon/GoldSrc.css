@@ -1,24 +1,32 @@
 @use 'variables' as *;
+@use 'docs';
 @use 'buttons';
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: "Verdana", sans-serif;
 }
 
 body {
-    background-color: #222222;
     color: $white;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+}
+
+a:not(.button) {
+    color: $green-border-light;
+    text-decoration: none;
+    &:focus-visible, &:hover {
+        color: $green-border-dark;
+    }
 }
 
 .window {
+    padding: 8px;
     background: $green;
-    height: 406px;
-    width: 512px;
     box-shadow: inset -1px -1px 0 0px $green-border-dark, inset 1px 1px 0 0px $green-border-light;
 }

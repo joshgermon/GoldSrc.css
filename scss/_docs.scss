@@ -1,0 +1,17 @@
+html {
+    height: 100vh;
+    background-color: #222222;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
